@@ -17,10 +17,11 @@
  * Define Global Variables
  * 
 */
-const nav = document.getElementById("navbar_list");
+
+// nav variable gets navbar_list element id
+const nav = document.getElementById("navbar__list");
+// section variable selects each section element
 const section = document.querySelectorAll("section");
-
-
 
 /**
  * End Global Variables
@@ -29,7 +30,20 @@ const section = document.querySelectorAll("section");
 */
 const generateNav = () => {
     section.forEach((section) => {
-        console.log(section)
+        // get data-nav attribute and set it to sectionName variable
+        const sectionName = section.getAttribute("data-nav");
+        // get section id attribute and set to sectionId variable
+        const sectionId = section.getAttribute('id');
+        // Create a <li>
+        const newLi = document.createElement("li");
+        // Append newLi to nav
+        nav.appendChild(newLi);
+        //set inner HTML to an <a> with href to sectionID and data-link to sectionName. Display sectionName
+        newLi.innerHTML += `<a class="menu__link" href="#${sectionId}" data-link=${sectionName}">${sectionName}`;
+
+        console.log(nav);
+        console.log(newLi);
+        console.log(sectionName);
     })
 }
 
