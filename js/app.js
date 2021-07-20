@@ -20,6 +20,7 @@
 
 // nav variable gets navbar_list element id
 const nav = document.getElementById("navbar__list");
+
 // section variable selects each section element
 const section = document.querySelectorAll("section");
 
@@ -41,14 +42,11 @@ const generateNav = () => {
         //set inner HTML to an <a> with href to sectionID and data-link to sectionName. Display sectionName
         newLi.innerHTML += `<a class="menu__link" href="#${sectionId}" data-link=${sectionName}">${sectionName}`;
 
-        console.log(nav);
-        console.log(newLi);
-        console.log(sectionName);
+        // console.log(nav);
+        // console.log(newLi);
+        // console.log(sectionName);
     })
 }
-
-generateNav();
-
 
 /**
  * End Helper Functions
@@ -57,10 +55,26 @@ generateNav();
 */
 
 // build the nav
-
+generateNav();
 
 // Add class 'active' to section when near top of viewport
 
+// Get bounding coordinates for each section
+const getSectionBounding = (section) => {
+    const sectionPosition = section.getBoundingClientRect();
+    console.log(sectionPosition)
+    return sectionPosition;
+}
+
+// function to check each section's coordinates and determine if it's in the viewport
+// if section is in viewport add class "your-active-section" else remove class "your-active section"
+const addActiveClass = () => {
+    section.forEach((section) => {
+        if (getSectionBounding(section).top < 125 && getSectionBounding(section).top >= -125) {
+            section.classList.add('your-active-class');
+        } else section.classList.remove('your-active-class');
+    });
+};
 
 // Scroll to anchor ID using scrollTO event
 
@@ -76,5 +90,5 @@ generateNav();
 // Scroll to section on link click
 
 // Set sections as active
-
+window.addEventListener('scroll', addActiveClass);
 

@@ -196,6 +196,11 @@ section:nth-of-type(3n + 1) .landing__container::after {
 section.your-active-class {
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    border: 1px solid red;
+}
+
+.navbar__menu .menu__link {
+    background-color: gray;
 }
 
 section.your-active-class .landing__container::before {
