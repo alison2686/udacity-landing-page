@@ -82,6 +82,14 @@ section {
     color: #000;
 }
 
+.navbar__menu .active-nav-link {
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: blue;
+}
+
 .navbar__menu .menu__link:hover {
     background: #333;
     color: #fff;
@@ -199,9 +207,19 @@ section.your-active-class {
     border: 1px solid red;
 }
 
-.navbar__menu .menu__link {
-    background-color: gray;
+section.active {
+    background: linear-gradient(
+0deg
+, rgba(156, 24, 24, 0.26) 100%, rgba(71, 26, 115, 0.774) 100%);
 }
+
+/* .navbar__menu .menu__link .your-active-class {
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: red;
+} */
 
 section.your-active-class .landing__container::before {
     opacity: 1;
