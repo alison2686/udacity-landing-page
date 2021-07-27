@@ -88,7 +88,7 @@ const addActiveClass = () => {
 // select all <a> tags in the document and set to variable scrollToSection
 const scrollToSection = document.querySelectorAll("a");
 
-// for each <a> add a click event listener, prevent default behvior, select the href attribute of the link, smooth scroll to the element using scollIntoView when clicked
+// for each <a> add a click event listener, prevent default behavior, select the href attribute of the link, smooth scroll to the element using scollIntoView when clicked
 scrollToSection.forEach((link) =>
     link.addEventListener("click", function(event) {
         event.preventDefault();
