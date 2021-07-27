@@ -111,6 +111,6 @@ scrollToSection.forEach((link) =>
 
 
 // Set sections as active
-window.addEventListener('scroll', addActiveClass);
+window.addEventListener("scroll", addActiveClass);
 
 
