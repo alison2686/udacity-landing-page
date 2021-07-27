@@ -18,10 +18,10 @@
  * 
 */
 
-// nav variable gets navbar__list element by its id
+// get navbar__list element by its id and set to nav variable
 const nav = document.getElementById("navbar__list");
 
-// section variable returns all section elements in the document
+// return all section elements in the document and set to section variable
 const section = document.querySelectorAll("section");
 
 /**
@@ -30,8 +30,12 @@ const section = document.querySelectorAll("section");
  * 
 */
 
-// generateNav function gets data-nav and section id attributes, creates a <li> and appends newLi to the nav for each section
-// //set inner HTML to an <a> with an id of nav-sectionId, href of #sectionID and data-link to sectionName. Display sectionName
+/**
+ * generateNav function gets data-nav and section id attributes, creates a <li> and appends newLi to nav for each section
+ * sets inner HTML to an <a> with an id of nav-sectionId, href of #sectionID and data-link to sectionName
+ * displays sectionName
+ */
+
 const generateNav = () => {
     section.forEach((section) => {
         const sectionName = section.getAttribute("data-nav");
@@ -59,9 +63,12 @@ const getSectionBounding = (section) => {
     return sectionPosition;
 }
 
-// function to check each section's bounding coordinates and determine if it's in the viewport
-// if section is in viewport add class "your-active-section" else remove it
-// if section is in viewport add class "active-nav-link" to nav link else remove it
+/** 
+ * addActiveClass function checks each section's bounding coordinates and determines if it's in the viewport
+ * if section is in viewport add class "your-active-section" to the section, else remove it
+ * if section is in viewport add class "active-nav-link" to nav link, else remove it
+ */
+
 const addActiveClass = () => {
     section.forEach((section) => {
         if (getSectionBounding(section).top < 150 && getSectionBounding(section).top >= -150) {
@@ -78,8 +85,10 @@ const addActiveClass = () => {
 
 // Scroll to anchor ID using scrollTO event
 
+// select all <a> tags in the document and set to variable scrollToSection
 const scrollToSection = document.querySelectorAll("a");
 
+// for each <a> add a click event listener, prevent default behvior, select the href attribute of the link, smooth scroll to the element using scollIntoView when clicked
 scrollToSection.forEach((link) =>
     link.addEventListener("click", function(event) {
         event.preventDefault();
