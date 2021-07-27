@@ -87,7 +87,9 @@ section {
     padding: 1em;
     font-weight: bold;
     text-decoration: none;
-    color: blue;
+    color: #00008b;
+    background-color: rgb(93,138,168);
+    opacity: 0.8;
 }
 
 .navbar__menu .menu__link:hover {
@@ -204,7 +206,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
 section.your-active-class {
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
-    border: 1px solid red;
+    background-color: rgb(93,138,168,0.7);
 }
 
 section.active {
@@ -212,14 +214,6 @@ section.active {
 0deg
 , rgba(156, 24, 24, 0.26) 100%, rgba(71, 26, 115, 0.774) 100%);
 }
-
-/* .navbar__menu .menu__link .your-active-class {
-    display: block;
-    padding: 1em;
-    font-weight: bold;
-    text-decoration: none;
-    color: red;
-} */
 
 section.your-active-class .landing__container::before {
     opacity: 1;
