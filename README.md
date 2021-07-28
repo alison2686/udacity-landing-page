@@ -4,6 +4,7 @@
 
 * [Description](#description)
 * [Run](#run)
+* [Deployment](#deployment)
 
 ## Description
 
@@ -12,4 +13,8 @@ This project displays a dynamically generated navigation menu that highlights th
 ## Run
 
 To run this website, clone the repository and open the index.html file in the browser. Or go to https://alison2686.github.io/udacity-landing-page/
+
+## Deployment
+
+Deployed using Github Pages. https://docs.github.com/en/pages
 
