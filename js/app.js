@@ -24,6 +24,9 @@ const nav = document.getElementById("navbar__list");
 // return all section elements in the document and set to section variable
 const section = document.querySelectorAll("section");
 
+// select all <a> tags in the document and set to variable scrollToSection
+const scrollToSection = document.querySelectorAll("a");
+
 /**
  * End Global Variables
  * Start Helper Functions
@@ -84,9 +87,6 @@ const addActiveClass = () => {
 };
 
 // Scroll to anchor ID using scrollTO event
-
-// select all <a> tags in the document and set to variable scrollToSection
-const scrollToSection = document.querySelectorAll("a");
 
 // for each <a> add a click event listener, prevent default behavior, select the href attribute of the link, smooth scroll to the element using scollIntoView when clicked
 scrollToSection.forEach((link) =>
